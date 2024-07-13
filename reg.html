@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Registration | MAH CODER</title>
+    <link rel="shortcut icon" href="favicon.jfif" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reg.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h2>
+                CARREG&reg;
+            </h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="reg.html" id="active">Registration</a></li>
+                <li><a href="sold.html">Registered</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="container">
+            <h1>REGISTRATION</h1>
+            <hr class="main-hr">
+            <form action="submit.php" method="post">
+                <div class="form first">
+                    <div class="details personal">
+                        <span class="title">Personal Details</span>
+                        <div class="fields">
+                            <div class="input-field">
+                                <label for="full-name">Full Name</label>
+                                <input type="text" id="full-name" placeholder="Enter your name" required
+                                    name="name">
+                            </div>
+                            <div class="input-field">
+                                <label>Father Name</label>
+                                <input type="text" placeholder="Enter Father Name" required name="fatherName">
+                            </div>
+                            <div class="input-field">
+                                <label>CNIC</label>
+                                <input type="number" name="cnic" placeholder="Enter your CNIC" required maxlength="13">
+                            </div>
+                            <div class="input-field">
+                                <label>Mobile Number</label>
+                                <input type="number" placeholder="Enter mobile number" required name="mobile">
+                            </div>
+                            <div class="input-field">
+                                <label>Email</label>
+                                <input type="text" placeholder="Enter your Email" required name="email">
+                            </div>
+                            <div class="input-field">
+                                <label>Gender</label>
+                                <select required name="gender">
+                                    <option disabled selected>Select gender</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details ID">
+                        <span class="title">Car Details</span>
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>Resgistration NO.</label>
+                                <input type="text" name="registrationNum" placeholder="Enter Registeration No."
+                                    required>
+                            </div>
+                            <div class="input-field">
+                                <label>Car Manufacture</label>
+                                <select required name="carMake">
+                                    <option disabled selected>Select Car Manufacture</option>
+                                    <option>Toyota</option>
+                                    <option>Honda</option>
+                                    <option>Suzuki</option>
+                                    <option>Nissan</option>
+                                    <option>Hybird</option>
+                                    <option>Audi</option>
+                                    <option>BMW</option>
+                                    <option>Mercedes-Benz</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <label>Car Model</label>
+                                <input type="text" name="carModel" placeholder="Enter Car Model" required>
+                            </div>
+                            <div class="input-field">
+                                <label>Car Color</label>
+                                <select required name="carColor">
+                                    <option disabled selected>Select Color</option>
+                                    <option>Black</option>
+                                    <option>Grey</option>
+                                    <option>Red</option>
+                                    <option>Blue</option>
+                                    <option>White</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <label for="modelYear">Model Year</label>
+                                <input type="number" name="modelYear" id="modelYear" placeholder="Enter Model Year" required>
+                            </div>
+                            <div class="input-field">
+                                <label for="issuedDate">Issued Date</label>
+                                <input type="date" name="issuedDate"required>
+                            </div>
+                        </div>
+                        <button class="nextBtn">
+                            <span class="btnText">Next</span>
+                            <i class="uil uil-navigator"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="form second">
+                    <div class="details address">
+                        <span class="title">More Car Details</span>
+                        <div class="fields">
+                            <div class="input-field">
+                                <label for="chassisNum">Chassis Number</label>
+                                <input type="text" id="chassisNum" name="chassisNum" placeholder="Chassis Number" required>
+                            </div>
+                            <div class="input-field">
+                                <label for="carType">Car Type</label>
+                                <select name="carType" id="carType" required>
+                                    <option disabled selected>Car Type</option>
+                                    <option value="Hatchback">Hatchback</option>
+                                    <option value="Sedan">Sedan</option>
+                                    <option value="SUV">SUV</option>
+                                    <option value="MUV">MUV</option>
+                                    <option value="Couple">Couple</option>
+                                    <option value="Pickup Truck">Pickup Truck</option>
+                                    <option value="Convertible">Convertible</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <label for="gps">GPS</label>
+                                <select name="gps" id="gps" required>
+                                    <option disabled selected> Select Yes/No</option>
+                                    <option value="1">Yes</option>
+                                    <option value="0">No</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <label>Mileage</label>
+                                <input type="text" name="mileage" placeholder="Enter Car Mileage" required
+                                    name="mileage">
+                            </div>
+                            <div class="input-field">
+                                <label>Insurance</label>
+                                <select name="insurance" id="" required>
+                                    <option disabled selected>Select Yes/No</option>
+                                    <option value="1">Yes</option>
+                                    <option value="0">No</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <label>Select Seating Capacity</label>
+                                <select name="carSeat" id="" required>
+                                    <option disabled selected>Select Seats</option>
+                                    <option value="2">2</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="8">8</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <div class="backBtn">
+                            <i class="uil uil-navigator"></i>
+                            <span class="btnText">Back</span>
+                        </div>
+
+                        <button class="sumbit" type="submit">
+                            <span class="btnText">Submit</span>
+                            <i class="uil uil-navigator"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <script>
+                const form = document.querySelector("form"),
+                    nextBtn = form.querySelector(".nextBtn"),
+                    backBtn = form.querySelector(".backBtn"),
+                    allInput = form.querySelectorAll(".first input");
+
+
+                nextBtn.addEventListener("click", () => {
+                    allInput.forEach(input => {
+                        if (input.value != "") {
+                            form.classList.add('secActive');
+                        } else {
+                            form.classList.remove('secActive');
+                        }
+                    })
+                })
+
+                backBtn.addEventListener("click", () => form.classList.remove('secActive'));
+
+            </script>
+        </div>
+    </main>
+
+    <!-- footer  -->
+
+    <footer>
+        <p>Copyright © 2024 by <span><a href="https://alihusnain-dev.github.io/portfolio/"><b>MAH Coder
+                    </b></a></span>&reg; | All Rights Reserved.</p>
+        <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
+    </footer>
+</body>
+
+</html>

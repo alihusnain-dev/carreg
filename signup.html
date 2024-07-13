@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Registration | MAH CODER&reg;</title>
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.jfif" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h2>
+                CARREG&reg;
+            </h2>
+            <ul>
+                <li><a href="index.html" id="active">Home</a></li>
+                <li><a href="reg.html">Registration</a></li>
+                <li><a href="sold.html">Registered</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <form action="signup.php" method="post">
+                <div class="details personal">
+                    <span class="title">SIGN-UP to CARREG&reg;</span>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" placeholder="Enter your name" required name="name">
+                        </div>
+                        <div class="input-field">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Enter your Email" required name="email">
+                        </div>
+                        <div class="input-field">
+                            <label for="mobile">Mobile Number</label>
+                            <input type="number" id="mobile" placeholder="Enter mobile number" required name="mobile">
+                        </div>
+                        <div class="input-field">
+                            <label for="gender">Gender</label>
+                            <select required name="gender">
+                                <option disabled selected>Select gender</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                            </select>
+                        </div>
+                        <hr style="width: 60%; margin: 25px auto; background-color: #7e050e; border: none; height: 3px;">
+                        <div class="input-field">
+                            <label for="username">Username</label>
+                            <input type="text" id="username" placeholder="Enter Username" required name="username">
+                        </div>
+                        <div class="input-field">
+                            <label for="password">Password</label>
+                            <input type="text" id="password" name="password" placeholder="Enter Password" required maxlength="20">
+                        </div>
+                        <div class="input-field">
+                            <label for="confirm">Confrim Password</label>
+                            <input type="text" id="confirm" name="confrim" placeholder="Confirm Password" required maxlength="20">
+                        </div>
+                        <div class="input-field">
+                            <a href="login.html">Already Have an Account?</a>
+                        </div>
+                    </div>
+                    
+                    <button class="sumbit" type="submit">
+                        <span class="btnText">Submit</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>Copyright © 2024 by <span><a href="https://alihusnain-dev.github.io/portfolio/"><b>MAH Coder
+                    </b></a></span>&reg; | All Rights Reserved.</p>
+        <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
+    </footer>
+</body>
+
+</html>

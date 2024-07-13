@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    transition: all .3s ease;
+    text-transform: uppercase;
+}
+
+#active {
+    color: #7e050e;
+    letter-spacing: 1px;
+}
+
+#active::before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0;
+    background-color: #7e050e;
+    top: 53px;
+    animation: load 1s ease forwards;
+}
+
+@keyframes load {
+    to {
+        width: 50px;
+    }
+}
+
+body {
+    background: url(https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header {
+    margin: 25px 50px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav h2 {
+    color: #7e050e;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 25px;
+    list-style: none;
+    font-size: 17px;
+}
+
+
+
+
+/* MAIN */
+
+/* ///////// */
+
+/* Footer */
+
+footer {
+    border-top: 3px solid #7e050e;
+    height: 80px;
+    width: 100vw;
+    background-color: #1e1e1e53;
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 80px;
+}
+
+footer p {
+    color: #fff;
+    letter-spacing: 1.5px;
+    padding-left: 9px;
+    border-left: 3px solid #7e050e;
+}
+
+footer span a {
+    color: #7e050e;
+    font-weight: bold;
+
+}
+
+footer i {
+    /* height: 30px;
+    width: 30px; */
+    background-color: #7e050e;
+    color: #fff;
+    font-weight: bold;
+    padding: 13px 15px;
+    font-size: 18px;
+    border-radius: 10px;
+    text-shadow: 0 0 10px #000;
+    transition: all .3s ease;
+}
+footer i:hover{
+    box-shadow: 0 0 10px #000;
+}
+
+@media (max-width: 750px) {
+    footer {
+        padding: 0 25px;
+    }
+}
+
+@media (max-width: 550px) {
+    header nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul li {
+        margin: auto 10px;
+    }
+
+    #active::before {
+        top: 85px;
+    }
+    footer{
+        height: 100px;
+    }
+}
+
+@media (max-width: 430px) {
+    header{
+        margin: 20px auto;
+    }
+    #active::before {
+        top: 81px;
+    }
+    
+}
