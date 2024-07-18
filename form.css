@@ -1,3 +1,4 @@
+
 main{
     margin: 50px auto;
 }
@@ -128,4 +129,33 @@ form .btnText{
 form button:hover
 {
     background: linear-gradient( #7e050e, #521212);
+}
+
+/* Log-in Sign Up Buttons */
+.btn{
+    /* margin-top: 50px; */
+    display: flex;
+    justify-content: center;
+}
+.btn a{
+    text-transform: uppercase;
+    margin-right: 10px;
+    padding: 10px 15px;
+    background-color: #7e050e;
+    color: #fff;
+    border-radius: 10px;
+}
+.btn a:hover{
+    text-shadow: 0 0 10px #000;
+    box-shadow: 0 0 10px #000;
+}
+/* ///////// */
+
+
+@media (max-width: 650px) {
+    
+    .container{
+        max-width: 100%;
+        box-shadow: none;
+    }
 }

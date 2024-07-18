@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car Registration | MAH CODER&reg;</title>
-    <link rel="stylesheet" href="form.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="form.css">
     <link rel="shortcut icon" href="favicon.jfif" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <style>
@@ -22,30 +22,29 @@
             <h2>
                 CARREG&reg;
             </h2>
-            <ul>
-                <li><a href="index.html" id="active">Home</a></li>
-                <li><a href="reg.html">Registration</a></li>
-                <li><a href="sold.html">Registered</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
+            <div class="btn">
+                <a href="login.html">Log-in</a>
+                <a href="signup.html">Sign-up</a>
+            </div>
+        </nav>
     </header>
 
     <main>
         <div class="container">
-            <form action="login.php" method="get">
+            <form action="login.php" method="post">
                     <span class="title">LOGIN to CARREG&reg;</span>
                     <div class="fields">
                         <div class="input-field">
-                            <label for="username">Full Name</label>
-                            <input type="text" id="username" placeholder="Enter Username" required
-                                name="username">
+                            <label for="email">Email</label>
+                            <input type="text" id="eamil" placeholder="Enter Email" required
+                                name="email">
                         </div>
                         <div class="input-field">
                             <label for="password">Password</label>
                             <input type="password" placeholder="Enter Password" required name="password">
                         </div>
                         <div class="input-field">
-                            <a href="login.html">Don't have any Account?</a>
+                            <a href="signup.html">Don't have any Account?</a>
                         </div>
                     </div>
                     <button class="sumbit" type="submit">
@@ -56,7 +55,7 @@
     </main>
 
     <footer>
-        <p>Copyright © 2024 by <span><a href="https://alihusnain-dev.github.io/portfolio/"><b>MAH Coder
+        <p>Copyright © 2024 by <span><a href="https://alihusnain-dev.github.io/portfolio/" target="1"><b>MAH Coder
                     </b></a></span>&reg; | All Rights Reserved.</p>
         <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
     </footer>

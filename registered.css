@@ -1,0 +1,66 @@
+.container {
+    margin: 200px auto;
+    z-index: -10;
+    max-width: 100%;
+    /* box-shadow: 0  0 5px #7e050e; */
+    backdrop-filter: blur(5px);
+    /* border-radius: 25px; */
+    padding: 50px 25px;
+    text-shadow: 0 0 10px #000;
+    box-shadow: 0 0 10px #00000072;
+}
+
+.container h2 {
+    color: #fff;
+}
+.container h2:hover{
+    color: #7e050e;
+}
+
+.container h2::after {
+    content: "";
+    display: block;
+    width: 70px;
+    border-bottom: 3px solid #7e050e;
+    margin: 5px 0 25px 0;
+}
+
+.table {
+    overflow-x: auto;
+    max-width: 100%;
+    width: 100%;
+    /* Ensures the table doesn't overflow its container */
+    padding-bottom: 1rem;
+}
+
+table {
+    width: 100%;
+    /* Table takes full width of its container */
+    border-collapse: collapse;
+    /* Remove default spacing between table cells */
+    margin: auto;
+    text-align: center;
+
+}
+
+table tr {
+    background-color: #4747475b;
+    border: 1px solid #000;
+    color: white;
+}
+
+table tr th {
+    background-color: #000;
+    color: #FFF;
+    padding: 10px;
+    font-weight: bold;
+    border-spacing: 0;
+}
+
+table tr td {
+    padding: 5px;
+}
+
+table tr:hover {
+    color: #7e050e;
+}

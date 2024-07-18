@@ -17,12 +17,10 @@
             <h2>
                 CARREG&reg;
             </h2>
-            <ul>
-                <li><a href="index.html" id="active">Home</a></li>
-                <li><a href="reg.html">Registration</a></li>
-                <li><a href="sold.html">Registered</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
+            <div class="btn">
+                <a href="login.html">Log-in</a>
+                <a href="signup.html">Sign-up</a>
+            </div>
         </nav>
     </header>
 
@@ -52,34 +50,67 @@
                                 <option>Female</option>
                             </select>
                         </div>
-                        <hr style="width: 60%; margin: 25px auto; background-color: #7e050e; border: none; height: 3px;">
+                        <hr
+                            style="width: 60%; margin: 25px auto; background-color: #7e050e; border: none; height: 3px;">
                         <div class="input-field">
                             <label for="username">Username</label>
                             <input type="text" id="username" placeholder="Enter Username" required name="username">
                         </div>
                         <div class="input-field">
                             <label for="password">Password</label>
-                            <input type="text" id="password" name="password" placeholder="Enter Password" required maxlength="20">
+                            <input type="text" id="password" name="password" placeholder="Enter Password" required>
                         </div>
                         <div class="input-field">
                             <label for="confirm">Confrim Password</label>
-                            <input type="text" id="confirm" name="confrim" placeholder="Confirm Password" required maxlength="20">
+                            <input type="text" id="confirm_password" name="confrim" placeholder="Confirm Password" required>
+                            <span id="password_error" class="error"></span>
+                            <script>
+                                function validateForm() {
+                                    var password = document.getElementById("password").value;
+                                    var confirm_password = document.getElementById("confirm_password").value;
+                                    var password_error = document.getElementById("password_error");
+                        
+                                    if (password !== confirm_password) {
+                                        password_error.textContent = "Passwords do not match";
+                                        return false;
+                                    } else {
+                                        password_error.textContent = "";
+                                        return true;
+                                    }
+                                }
+                            </script>
                         </div>
                         <div class="input-field">
                             <a href="login.html">Already Have an Account?</a>
                         </div>
                     </div>
-                    
+
                     <button class="sumbit" type="submit">
                         <span class="btnText">Submit</span>
                     </button>
                 </div>
             </form>
+            <script>
+                function validateForm() {
+                    var password = document.getElementById("password").value;
+                    var confirm_password = document.getElementById("confirm_password").value;
+                    var password_error = document.getElementById("password_error");
+        
+                    if (password !== confirm_password) {
+                        password_error.textContent = "Passwords do not match";
+                        return false;
+                    } else {
+                        password_error.textContent = "";
+                        return true;
+                    }
+                }
+            </script>
+            
         </div>
     </main>
 
     <footer>
-        <p>Copyright © 2024 by <span><a href="https://alihusnain-dev.github.io/portfolio/"><b>MAH Coder
+        <p>Copyright © 2024 by <span><a href="https://alihusnain-dev.github.io/portfolio/" target="1"><b>MAH Coder
                     </b></a></span>&reg; | All Rights Reserved.</p>
         <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
     </footer>

@@ -40,9 +40,10 @@ $sql = "INSERT INTO registration (`name`, `fatherName`, `cnic`, `mobile`, `email
 
 // Attempt insert query execution
 if ($conn->query($sql) === TRUE) {
-    echo "";
+    header("Location: login.html");
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    header("Location: error.html");
+    // echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
 $conn->close();

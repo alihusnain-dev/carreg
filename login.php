@@ -1,37 +1,50 @@
 <?php
-// now for LOGIN PAGE Code
+session_start();
 
-// Database connection details
 $servername = "localhost";
 $username = "root";
 $password = "";
-$database = "project";
+$database = "carreg";
 
-// Create connection
 $conn = new mysqli($servername, $username, $password, $database);
 
-// Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Variables from form submission
-$username = $_POST['username'];
-$password = $_POST['password'];
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
 
-// Query to check if user exists with given email and password
-$sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
-$result = $conn->query($sql);
+    // Debugging: Check if the SQL query is valid
+    $sql = "SELECT name, password FROM signup WHERE email = ?";
+    if ($stmt = $conn->prepare($sql)) {
+        $stmt->bind_param("s", $email);
+        $stmt->execute();
+        $stmt->store_result();
+        $stmt->bind_result($name, $hashed_password);
+        $stmt->fetch();
+        // $stmt->bind_result($name);
 
-if ($result->num_rows > 0) {
-    // Login successful
-    echo "Login successful!";
-    // Redirect to a welcome page or dashboard
-    header("Location: welcome.php");
-} else {
-    // Login failed
-    echo "Login failed. Invalid email or password.";
+        if ($stmt->num_rows > 0 && password_verify($password, $hashed_password)) {
+            $_SESSION['loggedin'] = true;
+            $_SESSION['username'] = $username;
+            // Bind result variables
+            // echo "<script>alert('Welcome! $username');</script>";
+            echo "<script>alert('Welcome, $name!');</script>";
+            header("Location: home.html");
+            exit();
+        } else {
+            echo "<script>alert('User ID and password not found. Please try again.');</script>";
+            // echo "<script>window.location.href = 'login.html';</script>";
+            header("location: login.html");
+        }
+
+        $stmt->close();
+    } else {
+        header("Location: error.html");
+        // echo "Error preparing statement: " . $conn->error;
+    }
 }
 
 $conn->close();
-?>

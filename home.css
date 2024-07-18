@@ -19,6 +19,12 @@ main {
     padding: 50px;
     color: #fff;
 }
+.container h2{
+    text-shadow: 0 0 10px #000;
+    font-style: italic;
+    text-decoration:underline;
+    margin: 20px auto;
+}
 .content{
     display: flex;
     justify-content: space-around;
@@ -33,6 +39,7 @@ main {
 .about-text h2 {
     font-size: 2em;
     margin-bottom: 10px;
+    text-decoration: unset;
 }
 .about-text h2::after{
     content: "";
@@ -56,25 +63,8 @@ main {
 .about-image img {
     width: 100%;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 }
-/* Log-in Sign Up Buttons */
-.container .btn{
-    margin-top: 50px;
-}
-.content a{
-    text-transform: uppercase;
-    margin-right: 10px;
-    padding: 10px 15px;
-    background-color: #7e050e;
-    color: #fff;
-    border-radius: 10px;
-}
-.content a:hover{
-    text-shadow: 0 0 10px #000;
-    box-shadow: 0 0 10px #000;
-}
-/* ///////// */
 
 
 @media (max-width: 900px) {
@@ -85,16 +75,21 @@ main {
         justify-content: center;
         margin: 50px auto;
         flex-direction: column;
-        padding: 25px;
+        padding: 50px auto;
         width: 85%;
         text-shadow:  0 0 10px #000;
     }
-    .about-text{
-        width: a;
+    .content{
+        flex-direction: column;
+        padding: 0;
+        
+    }
+    .about-text p{
+        text-align: center;
     }
     .about-image{
         margin-left: 0;
-        max-width: 80%;
+        max-width: 100%;
     }
 }
 @media (max-width: 550px) {
@@ -102,5 +97,7 @@ main {
         width: 90%;
         padding: 10px;
     }
-    
+    .about-text{
+        max-width: 90%;
+    }
 }
